@@ -58,15 +58,20 @@ $result = mysqli_query($mysqli, $query);
                             <tr>
                                 <?php
                                 while ($row = mysqli_fetch_assoc($result))
-                                {
+                                { 
                                 ?>
+                                
                                 <td><?php echo $row["dnote_ref"]; ?></td>
                                 <td><form method="post"><input value="<?php echo $row["ref_no"]; ?>"
                                                                name="<?php echo $row["ref_no"]; ?>"
                                                                type="submit"></form></td>
                                 <td><?php echo $row["date"]; ?></td>
                                 <td><?php echo $row["cname"]; ?></td>
-                                <td><?php echo $row["VAT"]; ?></td>
+                                <td><?php echo $row["VAT"]; ?> 
+                                    <form method="post" action="export_csv.php">
+                                        <button class="btn btn-success" name="export">EXPORT CSV</button>
+                                    </form>
+                                </td>
                                 <td><?php echo $row["amount_total"]; ?></td>
                                 <td><?php echo $row["status"]; ?></td>
                             </tr>
