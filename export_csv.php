@@ -1,8 +1,8 @@
 <?php
 if(isset($_POST['export'])){
 
-    // include('datab1.php');
-    $mysqli = mysqli_connect('localhost', 'root', '', 'login_acc');
+    include('datab1.php');
+    // $mysqli = mysqli_connect('localhost', 'root', '', 'login_acc');
 
     $file = 'data';
     header('Content-type:text/csv; charset=UTF-8');
