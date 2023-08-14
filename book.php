@@ -68,11 +68,20 @@ $result = mysqli_query($mysqli, $query);
                                 <td><?php echo $row["date"]; ?></td>
                                 <td><?php echo $row["cname"]; ?></td>
                                 <td><?php echo $row["VAT"]; ?> 
-                                    <form method="post" action="export_csv.php">
+                                    <form method="post" action="export_link.php?delid=<?php echo $row['ref_no']; ?>">
                                         <button class="btn btn-success" name="export">EXPORT CSV</button>
                                     </form>
+                                    
                                 </td>
-                                <td><?php echo $row["amount_total"]; ?></td>
+                                
+                                <?php
+
+                                ?>
+                                <td><?php echo $row["amount_total"]; ?>
+                                    <form method="post" action="delete.php?delid=<?php echo $row['id']; ?>">
+                                        <button class="btn btn-danger" name="delete">Delete</button>
+                                    </form>
+                                </td>
                                 <td><?php echo $row["status"]; ?></td>
                             </tr>
                             <?php
