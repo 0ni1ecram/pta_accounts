@@ -14,6 +14,8 @@ if(isset($_GET['delid'])){
     header('Content-disposition:attachment; filename=data.csv');
 
     $output = fopen('php://output', 'w');
+    $a = ['Pentagon', 'Trading', 'Agency'];
+    fputcsv($output, array('Pentagon','Trading',' Agency', $a ));    
     fputcsv($output, array('ID', 'QTY', 'Unit', 'Product', 'Description', 'Unit Price', 'Amount'));
 
     $sql = "SELECT str.*, sr.* 

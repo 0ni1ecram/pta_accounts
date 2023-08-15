@@ -78,9 +78,18 @@ $result = mysqli_query($mysqli, $query);
 
                                 ?>
                                 <td><?php echo $row["amount_total"]; ?>
+                                   
+                                    <div class="row"><div class="col">
                                     <form method="post" action="delete.php?delid=<?php echo $row['id']; ?>">
                                         <button class="btn btn-danger" name="delete">Delete</button>
                                     </form>
+                                    </div>
+                                    <div class="col">
+                                    <form method="post" action="edit.php?delid=<?php echo $row['id']; ?>">
+                                        <button class="btn btn-primary" name="update">Edit</button>
+                                    </form>
+                                    </div></div>
+                                    
                                 </td>
                                 <td><?php echo $row["status"]; ?></td>
                             </tr>
