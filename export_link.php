@@ -33,11 +33,11 @@ $n=0;
             $n++;
         }
     }
-    $x = $n+1;
+    $x = $n+2;
     ;
     fputcsv($output, array('','','','','','SUB-TOTAL', '=PRODUCT(SUM(G2:G'.$x.'),(1/1.18))'));
     fputcsv($output, array('','','','','','VAT', '=PRODUCT(SUM(G2:G'.$x.'),(1/1.18),0.18)'));
-    fputcsv($output, array('','','','','','Total','=SUM(G2:G'.$x.')'));
+    fputcsv($output, array('','','','','','Total','=SUM(G3:G'.$x.')'));
     fclose($output);
 }
 ?>
