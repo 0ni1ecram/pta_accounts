@@ -49,8 +49,8 @@ $result = mysqli_query($mysqli, $query);
                                 <td>Invoice No.</td>
                                 <td>Date</td>
                                 <td>Customer Ref</td>
-                                <td>VAT</td>
-                                <td>Total</td>
+                                <td></td>
+                                <td></td>
                                 <td>Status</td>
                             </tr>
                            </thead>
