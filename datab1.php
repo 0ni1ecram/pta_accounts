@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$datab ="login_acc";
+$datab ="pentagon_trading";
 
 $mysqli = new mysqli( hostname:$host, username:$user, password:$pass, database:$datab );
 

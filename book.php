@@ -67,7 +67,7 @@ $result = mysqli_query($mysqli, $query);
                                                                type="submit"></form></td>
                                 <td><?php echo $row["date"]; ?></td>
                                 <td><?php echo $row["cname"]; ?></td>
-                                <td><?php echo $row["VAT"]; ?> 
+                                <td><?php echo $row["vat"]; ?> 
                                     <form method="post" action="export_link.php?delid=<?php echo $row['ref_no']; ?>">
                                         <button class="btn btn-success" name="export">EXPORT CSV</button>
                                     </form>
@@ -77,7 +77,7 @@ $result = mysqli_query($mysqli, $query);
                                 <?php
 
                                 ?>
-                                <td><?php echo $row["amount_total"]; ?>
+                                <td><?php echo $row["g_amount"]; ?>
                                    
                                     <div class="row"><div class="col">
                                     <form method="post" action="delete.php?delid=<?php echo $row['id']; ?>">

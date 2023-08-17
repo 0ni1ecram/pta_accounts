@@ -146,5 +146,59 @@
 <!--    <button>Create</button>-->
 </form>
 
+<h1 class="text-danger"></h1>
+<?php
+
+//require_once ('../stat0/books/lpo/datab.php');
+require_once ('../phpForm/config/db.php');
+
+$query = "SELECT * FROM tax_invoice0";
+
+$result = mysqli_query($conn, $query);
+?>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="column">
+            <div class="card mt-5">
+                <div class="card-header">
+                    <div class="display-6 text-center">Tax Invoice Records</div>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered text-center">
+                        <tr class="bg-dark text-white">
+                            <td>Ref_No</td>
+                            <td>Company</td>
+                            <td>Address</td>
+                            <td>Date</td>
+                            <td>Sub-Total</td>
+                            <td>VAT</td>
+                            <td>Gross Amount</td>
+                            <td>Issued Pay</td>
+                        </tr>
+                        <tr>
+                            <?php
+                            while ($row = mysqli_fetch_assoc($result))
+                            {
+                            ?>
+                            <td><?php echo $row['ref_id']; ?></td>
+                            <td><?php echo $row['cname']; ?></td>
+                            <td>P.O.Box <?php echo $row['pcode'] . ", ";
+                                            echo $row['region'] . ", ";
+                                            echo ['country']; ?>1
+                            </td>
+                            <td><?php echo $row['date']; ?></td>
+                            <td><?php echo $row['sub_total']; ?></td>
+                            <td><?php echo $row['vat']; ?></td>
+                            <td><?php echo $row['g_amount']; ?></td>
+                            <td><?php echo $row['status']; ?></td>
+                        </tr>
+                        <?php }?>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
