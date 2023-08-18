@@ -27,7 +27,7 @@
             <div class="column">
                 <div class="card mt-5">
                     <div class="card-header">
-                        <div class="display-6 text-center">Tax Incvoice</div>
+                        <div class="display-6 text-center">Tax Invoice</div>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered text-center">
